@@ -1,0 +1,154 @@
+﻿slots:
+   location:
+    type: text
+   department:
+    type: text
+   date:
+    type: text
+   appointment:
+    type: text
+   doctor:
+    type: text
+   tc:
+    type: text
+   info:
+    type: text
+   answer:
+    type: text
+
+
+intents:
+   - greet
+   - goodbye
+   - inform
+   - department
+   - location
+   - date
+   - appointment
+   - doctor
+   - tc
+   - info
+   - answer
+   - child
+
+entities:
+   - location
+   - department
+   - doctor
+   - date
+   - appointment
+   - tc
+   - info
+   - answer
+
+templates:
+   utter_greet:
+    - text: "Hello. How can help you?"
+   utter_ask_location:
+    - text: "Which hospital do you want to serve?"
+      buttons:
+       - title: "ANKARA"
+         payload: "ANKARA"
+       - title: "ISTANBUL"
+         payload: "ISTANBUL"
+       - title: "SAMSUN"
+         payload: "SAMSUN"
+   utter_ask_department:
+    - text: "From which department do you want to make an appointment?"
+      buttons:
+       - title: "algology"
+         payload: "algology"
+       - title: "brain and neurosurgery"
+         payload: "brain and neurosurgery"
+       - title: "child hematology"
+         payload: "child hematology"
+       - title: "child nephrology"
+         payload: "child nephrology"
+       - title: "child health and illness"
+         payload: "child health and illness"
+       - title: "dermatology"
+         payload: "dermatology"
+       - title: "diet policlinic"
+         payload: "diet policlinic"
+       - title: "endocrinology"
+         payload: "endocrinology"
+       - title: "infectious diseases"
+         payload: "infectious diseases"
+       - title: "physical therapy and rehabilitation"
+         payload: "physical therapy and rehabilitation"
+       - title: "gastroenterology"
+         payload: "gastroenterology"
+       - title: "general surgery"
+         payload: "general surgery"
+       - title: "chest diseases"
+         payload: "chest diseases"
+       - title: "eye diseases"
+         payload: "eye diseases"
+       - title: "hematology policlinic"
+         payload: "hematology policlinic"
+       - title: "internal diseases"
+         payload: "internal diseases"
+       - title: "gynecology and Obstetrics"
+         payload: "gynecology and Obstetrics"
+       - title: "cardiac surgery"
+         payload: "cardiac surgery"
+       - title: "cardiology"
+         payload: "cardiology"
+       - title: "ENT diseases"
+         payload: "ENT diseases"
+       - title: "nephrology"
+         payload: "nephrology"
+       - title: "neurology"
+         payload: "neurology"
+       - title: "orthopedics and traumatology"
+         payload: "orthopedics and traumatology"
+       - title: "plastic surgery"
+         payload: "plastic surgery"
+       - title: "psychiatry"
+         payload: "psychiatry"
+       - title: "psychologist"
+         payload: "psychologist"
+       - title: "rheumatology"
+         payload: "rheumatology"
+       - title: "medical oncology"
+         payload: "medical oncology"
+       - title: "urology"
+         payload: "urology"
+   utter_ask_doctor:
+    - text: "Which doctor's appointment you want to make?"
+   utter_ask_date:
+    - text: "When would you like to make an appointment?"
+   utter_ask_tc:
+    - text: "Please enter your TC number ..."
+   utter_goodbye:
+    - text: "See you later"
+    - text: "bye :("
+    - text: "ALLAHA ISMARLADIK"
+   utter_error:
+    - text: "ne dediginizi anlayamadim :("
+   utter_ask_name:
+    - text: "Isminiz nedir?"
+    - text: "Isminizi ogrenebilir miyim?"
+
+
+
+actions:
+   - utter_greet
+   - utter_ask_location
+   - utter_ask_department
+   - utter_ask_doctor
+   - utter_ask_date
+   - utter_ask_tc
+   - utter_goodbye
+   - utter_ask_name
+   - utter_error
+   - ddd.ActionWeather
+   - dddd.ActionWeatherd
+   - ttt.ActionWeathert
+   - info_story.Info_story
+   - (0-17)years.Answer_Info
+   - child_health.Child_Health
+
+
+
+

@@ -1,0 +1,40 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "department",
+        "tc",
+        "doctor",
+        "appointment",
+        "location",
+        "answer",
+        "date",
+        "info"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "information": {
+      "slots": [
+        "department",
+        "info"
+      ]
+    },
+    "answer_info": {
+      "slots": [
+        "department"
+      ]
+    }
+  },
+  "rasa_core": "0.10.0",
+  "max_histories": [
+    5,
+    5
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "__main__.HospitalPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ]
+}

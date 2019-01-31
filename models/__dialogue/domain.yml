@@ -1,0 +1,170 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_ask_location
+- utter_ask_department
+- utter_ask_doctor
+- utter_ask_date
+- utter_ask_tc
+- utter_goodbye
+- utter_ask_name
+- utter_error
+- action_doctor
+- action_doctord
+- action_doctort
+- information
+- answer_info
+- child
+actions:
+- utter_greet
+- utter_ask_location
+- utter_ask_department
+- utter_ask_doctor
+- utter_ask_date
+- utter_ask_tc
+- utter_goodbye
+- utter_ask_name
+- utter_error
+- ddd.ActionWeather
+- dddd.ActionWeatherd
+- ttt.ActionWeathert
+- info_story.Info_story
+- (0-17)years.Answer_Info
+- child_health.Child_Health
+config:
+  store_entities_as_slots: true
+entities:
+- location
+- department
+- doctor
+- date
+- appointment
+- tc
+- info
+- answer
+intents:
+- greet
+- goodbye
+- inform
+- department
+- location
+- date
+- appointment
+- doctor
+- tc
+- info
+- answer
+- child
+slots:
+  answer:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  appointment:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  department:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  doctor:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  info:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  tc:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_date:
+  - text: When would you like to make an appointment?
+  utter_ask_department:
+  - buttons:
+    - payload: algology
+      title: algology
+    - payload: brain and neurosurgery
+      title: brain and neurosurgery
+    - payload: child hematology
+      title: child hematology
+    - payload: child nephrology
+      title: child nephrology
+    - payload: child health and illness
+      title: child health and illness
+    - payload: dermatology
+      title: dermatology
+    - payload: diet policlinic
+      title: diet policlinic
+    - payload: endocrinology
+      title: endocrinology
+    - payload: infectious diseases
+      title: infectious diseases
+    - payload: physical therapy and rehabilitation
+      title: physical therapy and rehabilitation
+    - payload: gastroenterology
+      title: gastroenterology
+    - payload: general surgery
+      title: general surgery
+    - payload: chest diseases
+      title: chest diseases
+    - payload: eye diseases
+      title: eye diseases
+    - payload: hematology policlinic
+      title: hematology policlinic
+    - payload: internal diseases
+      title: internal diseases
+    - payload: gynecology and Obstetrics
+      title: gynecology and Obstetrics
+    - payload: cardiac surgery
+      title: cardiac surgery
+    - payload: cardiology
+      title: cardiology
+    - payload: ENT diseases
+      title: ENT diseases
+    - payload: nephrology
+      title: nephrology
+    - payload: neurology
+      title: neurology
+    - payload: orthopedics and traumatology
+      title: orthopedics and traumatology
+    - payload: plastic surgery
+      title: plastic surgery
+    - payload: psychiatry
+      title: psychiatry
+    - payload: psychologist
+      title: psychologist
+    - payload: rheumatology
+      title: rheumatology
+    - payload: medical oncology
+      title: medical oncology
+    - payload: urology
+      title: urology
+    text: From which department do you want to make an appointment?
+  utter_ask_doctor:
+  - text: Which doctor's appointment you want to make?
+  utter_ask_location:
+  - buttons:
+    - payload: ANKARA
+      title: ANKARA
+    - payload: ISTANBUL
+      title: ISTANBUL
+    - payload: SAMSUN
+      title: SAMSUN
+    text: Which hospital do you want to serve?
+  utter_ask_name:
+  - text: Isminiz nedir?
+  - text: Isminizi ogrenebilir miyim?
+  utter_ask_tc:
+  - text: Please enter your TC number ...
+  utter_error:
+  - text: ne dediginizi anlayamadim :(
+  utter_goodbye:
+  - text: See you later
+  - text: bye :(
+  - text: ALLAHA ISMARLADIK
+  utter_greet:
+  - text: Hello. How can help you?
